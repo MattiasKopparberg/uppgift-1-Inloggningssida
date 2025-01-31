@@ -1,31 +1,110 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+
 
 body{
-    background-image: url(Images/Windows.webp);
-    background-size: 100%;
+    background-color: #a1c6e4;
 }
 
-article{
-    border: 3px solid darkblue;
-    background-color: cornflowerblue;
-    margin: auto;
-    width: 25%;
+.div-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    grid-template-areas: 
+    "header" 
+    "content"
+    "footer";
+}
+
+.header{
+    grid-area: header;
+    place-self: center;
+    background-color:rgb(38, 133, 241);;
     text-align: center;
-    font-size: 26px;
-    
+    color: white;
+    padding: 2%;
+    border: 2px solid #ccc;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.5);
+
 }
 
+.content{
+    grid-area: content;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 
 
-input{
-    background-color: gainsboro;
-    margin: auto;
-}
-.button{
-
+.window{
+    background-color: rgb(38, 133, 241);
+    place-self: center;
+    color: white;
     text-align: center;
+    padding: 4% 6%;
+    margin:20px 20px 150px 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 30%;
+    height: 60%;
+    box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.footer{
+    grid-area: footer;
+    background-color: rgb(38, 133, 241);
+    border: 2px solid #ccc;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+
+.input{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+        align-self: center;
+    font-size: 1em;
+}
+
+#Login{
+    background-color: white;
+    color: #a1c6e4;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    width: 30%;
+    cursor: pointer;
+    place-self: center;
+}
+
+@media(max-width: 800px) 
+{
+    .window {
+        width: 100%;
+        padding: 4% 6%;
+        margin:20px;
+    }
+
+    #Login{
+        width: 70%;
+        padding: 1% 2%;
+        margin:20px;
+    }
+}
+
+
+#Login:hover{
+    background-color: #a1c6e4;
     color: black;
-
 }
