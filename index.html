@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Login Page</title>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <div class="div-container">
-        <header class="header">
-            <h1>Login Page</h1>
-        </header>
-        <main class="content">
-            <div class="window">
-                <div class="input"><input type="email" placeholder="example@email.com">  </div>
-                <div class="input"><input type="password" placeholder="Password">  </div>
-                <div class="window-item"><input type="checkbox"> Remember Me </div>
-                <div id="Login">Log in<i class="fa-solid fa-right-to-bracket"></i></div>
-                <div class="window-item"><a href="about:blank" target="_blank"> Dont have one? Create one!</a></div>
-        </main>   
+      <header class="header">
+        <h1>Login Page</h1>
+      </header>
+      <main class="container">
+        <div class="screen">
+          <form class="login">
+            <div class="login-field">
+              <i class="login-icon fas fa-user"></i>
+              <input
+                type="text"
+                class="login-input"
+                placeholder="example@email.com"
+              />
+            </div>
 
-        <footer class="footer">
-            <p>Frontend React 25 Distans</p>
-        </footer>
-    </div>  
-</body>
+            <div class="login-field">
+              <i class="login-icon fas fa-lock"></i>
+              <input
+                type="password"
+                class="login-input"
+                placeholder="Password"
+              />
+            </div>
+
+            <button class="button login-submit">
+              <span class="button-text">Log In Now</span>
+            </button>
+          </form>
+
+          <div class="thirPartyLogin">
+            <h3>Log in via</h3>
+            <div>
+              <a href="#" class="thirdPartyIcon fab fa-instagram"></a>
+              <a href="#" class="thirdPartyIcon fab fa-facebook"></a>
+              <a href="#" class="thirdPartyIcon fab fa-x"></a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <p>Frontend React 25 Distans</p>
+      </footer>
+    </div>
+  </body>
 </html>

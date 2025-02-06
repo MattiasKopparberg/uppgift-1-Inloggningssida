@@ -1,110 +1,117 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-
-body{
-    background-color: #a1c6e4;
+body {
+  background: linear-gradient(#3c55c7, #8188c9);
 }
 
-.div-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-    grid-template-areas: 
-    "header" 
+.div-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  grid-template-areas:
+    "header"
     "content"
     "footer";
 }
 
-.header{
-    grid-area: header;
-    place-self: center;
-    background-color:rgb(38, 133, 241);;
-    text-align: center;
-    color: white;
-    padding: 2%;
-    border: 2px solid #ccc;
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.5);
-
+.header {
+  grid-area: header;
+  place-self: center;
+  background: rgb(26, 79, 150);
+  text-align: center;
+  color: white;
+  padding: 2%;
+  border: 2px solid #ffffff;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.content{
-    grid-area: content;
-    padding: 20px;
+.container {
+  grid-area: content;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
+  background: linear-gradient(#3c55c7, #8188c9);
+  place-self: center;
+  color: white;
+  text-align: center;
+  padding: 4% 6%;
+  margin: 20px 20px 150px 20px;
+  border: 2px solid #ccc;
+  border-radius: 26px;
+  width: 90%;
+  max-width: 450px;
+  height: 60%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(26, 79, 150);
+  border: 2px solid #ccc;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  align-self: center;
+  font-size: 1em;
+}
+
+.thirdPartyLogin {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 10px;
+  padding: 20px 0px;
+  position: relative;
+}
+
+.thirdPartyIcon {
+  position: relative;
+  margin:0 10px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.button {
+  background: white;
+  margin-top: 30px;
+  padding: 10px 45px;
+  border-radius: 25px;
+  border: 1px solid #a1c6e4;
+  text-transform: uppercase;
+  font-weight: 400;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .screen {
+      width: 100%;
+      padding: 4% 6%;
+      margin: 20px;
     }
-
-
-.window{
-    background-color: rgb(38, 133, 241);
-    place-self: center;
-    color: white;
-    text-align: center;
-    padding: 4% 6%;
-    margin:20px 20px 150px 20px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    width: 30%;
-    height: 60%;
-    box-shadow: rgba(0, 0, 0, 0.5);
-}
-
-.footer{
-    grid-area: footer;
-    background-color: rgb(38, 133, 241);
-    border: 2px solid #ccc;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-}
-
-
-.input{
-    width: 100%;
-    padding: 5px;
-    margin: 5px 0;
-        align-self: center;
-    font-size: 1em;
-}
-
-#Login{
-    background-color: white;
-    color: #a1c6e4;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    width: 30%;
-    cursor: pointer;
-    place-self: center;
-}
-
-@media(max-width: 800px) 
-{
-    .window {
-        width: 100%;
-        padding: 4% 6%;
-        margin:20px;
+  
+    .Login {
+      width: 70%;
+      padding: 1% 2%;
+      margin: 20px;
     }
-
-    #Login{
-        width: 70%;
-        padding: 1% 2%;
-        margin:20px;
-    }
-}
-
-
-#Login:hover{
-    background-color: #a1c6e4;
-    color: black;
-}
+  }
+  
